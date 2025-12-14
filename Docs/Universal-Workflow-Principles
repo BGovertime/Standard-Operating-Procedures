@@ -1,0 +1,211 @@
+Universal-Workflow-Principles
+1️⃣ Prioritize the tools.
+VS Code→ Used as the primary IDE for development and documenting code/manuals.
+GitHub→ Maintain standard repositories, version control, and workflows.
+Week→ Used as living documentation for manuals and references.
+Note→ Record short ideas or to-do lists using quick capture.
+Docs→ Complete summaries of research papers, reports, and manuals.
+Cloud (recommended)→ Store the original file and additional data (OneDrive/Google Drive)
+Sources of information and social media (finally)→ Used for publishing and sharing results.
+
+2️⃣ Steps in the process (Workflow Loop)
+Analyze and create content.
+Use VS Code + Note → draft and prototype.
+Save and control versions.
+Commit to GitHub → Use the branch for the new project.
+Explain and link the information.
+Update Wiki → Sub-guide + query reference
+Summarize and archive.
+Docs → Full Report
+Cloud → Stores the original files.
+Share and present.
+Zoom + Email → Meetings, sending summaries, notifications
+Social → Published when ready.
+Loop
+Every day involves summarizing and planning.
+Review and update the repository every year.
+
+3️⃣ Daily Calendar Loop
+time
+activity
+tool
+09:00 – 12:00
+Analyze/write code/record ideas
+VS Code, Note
+12:00 – 13:00
+Take a break/Review
+—
+13:00 – 15:00
+Commit + Update Wiki/Docs
+GitHub, Wiki, Docs
+20:00 – 21:00
+Daily task summary
+Docs, Note
+21:00 – 22:00
+Plan for the next day + Zoom meeting
+Email, Zoom
+
+
+4️⃣ System Integration
+Email + Calendar→ Automatic daily summary delivery, Zoom meeting scheduling.
+Zoom→ Use the time period of 21:00–22:00 for team syncing.
+GitHub Actions→ Automatically update Wiki/Docs when a commit occurs.
+Cloud Sync→ Keep the original files and link them with Docs.
+
+5️⃣ Annual work loop
+every day→ Analyze → Commit → Summarize → Plan
+every month→ Review repository + Wiki → Update information
+Every year→ System-wide audit → Improve workflow → Start the loop again
+
+How it works
+TriggerEvery time there is a commit on a branch.mainOr press manual run.
+step:
+Checkout repository
+Set up Git for the bot.
+Copy files from docs/Go to the Wiki repository (.wiki)
+Commit and push to Wiki repo.
+resultThe Wiki will automatically update to match the documentation whenever there is a commit.
+
+🌐 Key features of this template:
+Reusable every year (same standard).
+Real-time updates when a commit occurs.
+Supports manual triggers for special syncs.
+Reduce redundancy: Docs are the primary source of information, Wiki is a mirror for reference.
+
+Docs/Wiki folder structure (standard package)
+repository/
+├── docs/ # Main Documents (Docs)
+│   ├── project-A/
+│ │ ├── overview.md # Project Overview
+│ │ ├── checklist.md # Checklist of data to be collected
+│ │ ├── summary.yaml # Structured data summary
+│ │ └── references.md # Sources/Reference Links
+│   ├── project-B/
+│   │   ├── overview.md
+│   │   ├── checklist.md
+│   │   ├── summary.yaml
+│   │   └── references.md
+│ └── templates/ # Standard templates
+│       ├── checklist-template.md
+│       ├── summary-template.yaml
+│       └── overview-template.md
+│
+├── wiki/ # Wiki (mirror of Docs)
+│   ├── project-A.md
+│   ├── project-B.md
+│ └── index.md # Index for all projects
+│
+├── queries/ # Query warehouse for retrieving data
+│   ├── project-A/
+│   │   └── analysis.sql
+│   └── project-B/
+│       └── analysis.sql
+│
+└── main-repo.md # Large box (overall overview)
+
+
+✅ Standard Checklist (Checklist Template)
+# Project Checklist
+
+## Basic Information
+- [ ] Project ID
+- [ ] Project Title
+- [ ] Author/Owner
+- [ ] Version
+- [ ] Last Updated
+
+## Main Content
+- [ ] Overview (Project Overview)
+- [ ] Objectives (Purpose)
+- [ ] Key Findings (Main Analysis Results)
+- [ ] Next Steps (Next steps plan)
+
+## Additional Information
+- [ ] References (Sources/Links)
+- [ ] Queries (data retrieval commands)
+- [ ] Attachments (Original file/Cloud link)
+
+## Verification
+- [ ] Commit to GitHub
+- [ ] Sync to Wiki
+- [ ] Reviewed by Team
+
+
+🔄 How to use in Workflow
+Create a new project.→ Copytemplates/Go to the project folder.
+Fill out the checklist.→ Fill in the information.checklist.mdTo be complete.
+Summary Notes→ Usesummary.yamlFor metadata and data structures.
+Commit→ Push to GitHub → Actions will automatically sync to the Wiki.
+Trace back→ Use the Wiki + checklist to check the project's completeness.
+
+✨ Highlights of this package
+have Standard templateFor every project → Reduce confusion.
+A checklist helps prevent data loss → Easy to verify.
+Wiki mirroring makes it easy to review information → Use it as a reference in conjunction with documentation.
+Queries are clearly separated → Data can be retrieved repeatedly without copying files.
+📘 User Manual
+GuideBlueprint:
+id: string # Guide ID, e.g., "streaming-module"
+title: string # Guide title, e.g., "Streaming Module Usage Guide"
+description: string # Short description (in Thai)
+version: string # version, e.g., "v1.0"
+author: string # Author/Administrator
+last_updated: date # Last modified date
+commands: Command[] # List of commands actually used
+ethics_banner: string # Safety and ethics banner
+
+Command:
+name: string # Command name, e.g., "Start Streaming"
+syntax: string # Usage format, e.g., "npm run stream"
+description: string # Description (Thai)
+example: string # Real-world example usage
+
+🏷️ Title & Description Template
+TitleUse the module or topic name, for example:
+
+
+Streaming Module Usage Guide
+Magic Button Quick Reference
+DescriptionBriefly explain what this manual is for, for example:
+
+
+"This guide describes how to use the Streaming module for presenting and sharing multi-stream data."
+"This guide provides instructions on using the Magic Button to capture ideas and inspiration."
+
+⚖️ Principles of Data Use
+Accuracy
+Use the information as recorded in the manual; do not modify it without verification.
+Transparency
+Always indicate the source of information and provide references.
+Responsibility
+Users are responsible for the consequences of using the data.
+Safety
+Do not use this information to violate the rights of, misrepresent, or harm others.
+Ethics
+Use data for development, learning, and innovation, not for destruction.
+
+🚨 Ethics & Safety Banner
+⚠️ **Ethics & Safety Notice**
+
+The information in this guide is part of research and development.
+All users must adhere to the following principles:
+
+- Use the information accurately and transparently.
+- Take responsibility for the consequences.
+- Do not use this information for rights violations or harm.
+- Respect the ethics and safety of all parties.
+
+By accessing and using this information, the user agrees to these terms.
+
+
+
+
+
+
+
+
+
+
+
+
+
